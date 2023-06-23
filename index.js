@@ -37,11 +37,17 @@ inquirer
       message: "Choose a shape:",
       choices: ["circle", "triangle", "square"],
     },
+    {
+      name: "shapeColor",
+      type: "input",
+      message: "Enter the shape color (keyword or hexadecimal):",
+    },
   ])
   .then((answers) => {
     console.log("Text:", answers.text);
     console.log("Color:", answers.color);
     console.log("Shape:", answers.shape);
+    console.log("Shape Color:", answers.shapeColor);
   })
   .catch((error) => {
     console.error(error);
