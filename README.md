@@ -13,6 +13,7 @@
 - [Installation](#installation)
 - [Usage](#usage)
 - [Tests](#tests)
+- [Video](#walkthrough_video)
 
 ## Installation
 
@@ -25,6 +26,10 @@
 
 ![Input](/screenshots/input.png)
 ![Result](/screenshots/result.png)
+
+## Walkthrough_video
+
+https://drive.google.com/file/d/1xPCqglhzmIOougA8Cua6KKCDSrnCux5b/view
 
 ## Tests
 
