@@ -29,3 +29,5 @@
 ## Tests
 
 The tests in the code verify that the shapes (Circle, Triangle, and Square) are rendered correctly. They check if the shapes are rendered with the specified color or the default color when no color is provided, using expected render output comparisons.
+
+![Tests](/screenshots/test.jpeg)
