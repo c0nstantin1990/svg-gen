@@ -2,6 +2,16 @@ const inquirer = require("inquirer");
 const fs = require("fs");
 const { Triangle, Square, Circle } = require("./lib/shapes");
 
+function validateColor(input) {
+  const hexRegex = /^#([0-9A-Fa-f]{3}){1,2}$/;
+  const namedColorRegex = /^[a-zA-Z]+$/;
+  return (
+    hexRegex.test(input) ||
+    namedColorRegex.test(input) ||
+    "Enter a valid color."
+  );
+}
+
 function writeToFile(fileName, svgText) {
   fs.writeFile(fileName, svgText, { encoding: "utf8" }, (err) => {
     if (err) {
@@ -26,6 +36,7 @@ function userInput() {
         type: "input",
         message: "Choose the text color (Or a hexadecimal number)",
         name: "textColor",
+        validate: validateColor,
       },
       {
         type: "list",
@@ -37,6 +48,7 @@ function userInput() {
         type: "input",
         message: "Choose the shape color (Or a hexadecimal number)",
         name: "shapeColor",
+        validate: validateColor,
       },
     ])
     .then((answers) => {
