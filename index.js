@@ -3,7 +3,7 @@ const fs = require("fs");
 const { Triangle, Square, Circle } = require("./lib/shapes");
 
 function writeToFile(fileName, svgText) {
-  fs.writeFile(fileName, svgText, (err) => {
+  fs.writeFile(fileName, svgText, { encoding: "utf8" }, (err) => {
     if (err) {
       console.log(err);
     } else {
