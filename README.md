@@ -27,6 +27,8 @@
 ![Input](/screenshots/input.png)
 ![Result](/screenshots/result.png)
 
+GitHub Repo: https://github.com/c0nstantin1990/svg-gen
+
 ## Walkthrough_video
 
 https://drive.google.com/file/d/1xPCqglhzmIOougA8Cua6KKCDSrnCux5b/view
