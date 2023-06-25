@@ -42,7 +42,7 @@ function userInput() {
     .then((answers) => {
       let shape;
       let svgText =
-        '<svg version="1.5.2" width="300" height="200" xmlns="http://www.w3.org/2000/svg">';
+        '<svg version="1.0" width="300" height="200" xmlns="http://www.w3.org/2000/svg">';
 
       switch (answers.shape) {
         case "Triangle":
