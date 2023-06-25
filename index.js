@@ -42,20 +42,20 @@ function userInput() {
     .then((answers) => {
       let shape;
       let svgText =
-        '<svg version="1.0" width="300" height="200" xmlns="http://www.w3.org/2000/svg">';
+        '<svg version="1.1" width="300" height="200" xmlns="http://www.w3.org/2000/svg">';
 
       switch (answers.shape) {
         case "Triangle":
           shape = new Triangle();
-          svgText += `<polygon points="150, 20 255, 185 60, 185" fill="${answers.shapeColor}"/>`;
+          svgText += `<polygon points="150, 18 244, 182 56, 182" fill="${answers.shapeColor}"/>`;
           break;
         case "Square":
           shape = new Square();
-          svgText += `<rect x="75" y="45" width="165" height="165" fill="${answers.shapeColor}"/>`;
+          svgText += `<rect x="73" y="40" width="160" height="160" fill="${answers.shapeColor}"/>`;
           break;
         case "Circle":
           shape = new Circle();
-          svgText += `<circle cx="155" cy="120" r="80" fill="${answers.shapeColor}"/>`;
+          svgText += `<circle cx="150" cy="115" r="80" fill="${answers.shapeColor}"/>`;
           break;
       }
       svgText += `<text x="150" y="130" text-anchor="middle" font-size="40" fill="${answers.textColor}">${answers.text}</text>`;
