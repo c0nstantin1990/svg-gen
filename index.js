@@ -2,6 +2,16 @@ const inquirer = require("inquirer");
 const fs = require("fs");
 const { Triangle, Square, Circle } = require("./lib/shapes");
 
+function writeToFile(fileName, svgText) {
+  fs.writeFile(fileName, svgText, (err) => {
+    if (err) {
+      console.log(err);
+    } else {
+      console.log("Generated logo.svg");
+    }
+  });
+}
+
 function userInput() {
   inquirer
     .prompt([
@@ -48,6 +58,10 @@ function userInput() {
           svgText += `<circle cx="155" cy="120" r="80" fill="${answers.shapeColor}"/>`;
           break;
       }
+      svgText += `<text x="150" y="130" text-anchor="middle" font-size="40" fill="${answers.textColor}">${answers.text}</text>`;
+      svgText += "</svg>";
+
+      writeToFile("logo.svg", svgText);
     });
 }
 userInput();
