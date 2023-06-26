@@ -26,7 +26,6 @@ function writeToFile(fileName, svgText) {
 
 // Generate SVG logo based on user input
 function generateLogo(text, textColor, shape, shapeColor) {
-  let shapeInstance;
   let svgText =
     '<svg version="1.1" width="300" height="200" xmlns="http://www.w3.org/2000/svg">';
 
