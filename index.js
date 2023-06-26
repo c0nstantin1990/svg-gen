@@ -1,7 +1,7 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 const { Triangle, Square, Circle } = require("./lib/shapes");
-
+// Function to validate hexadecimal number
 function validateColor(input) {
   const hexRegex = /^#([0-9A-Fa-f]{3}){1,2}$/;
   const namedColorRegex = /^[a-zA-Z]+$/;
@@ -11,7 +11,7 @@ function validateColor(input) {
     "Enter a valid color."
   );
 }
-
+// Function to write svg file
 function writeToFile(fileName, svgText) {
   fs.writeFile(fileName, svgText, { encoding: "utf8" }, (err) => {
     if (err) {
@@ -21,7 +21,7 @@ function writeToFile(fileName, svgText) {
     }
   });
 }
-
+// User inputs for svg creation
 function userInput() {
   inquirer
     .prompt([
@@ -58,14 +58,17 @@ function userInput() {
 
       switch (answers.shape) {
         case "Triangle":
+          // Create a new instance of the Triangle shape
           shape = new Triangle();
           svgText += `<polygon points="150, 18 244, 182 56, 182" fill="${answers.shapeColor}"/>`;
           break;
         case "Square":
+          // Create a new instance of the Square shape
           shape = new Square();
           svgText += `<rect x="73" y="40" width="160" height="160" fill="${answers.shapeColor}"/>`;
           break;
         case "Circle":
+          // Create a new instance of the Circle shape
           shape = new Circle();
           svgText += `<circle cx="150" cy="115" r="80" fill="${answers.shapeColor}"/>`;
           break;
